@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-page: #FFF9F4;
+    --bg-card: #FFFFFF;
+    --bg-card-secondary: #FDF4ED;
+    --bg-subtle: #F6ECE3;
+    --text-main: #171717;
+    --text-muted: #6B6B6B;
+    --border-color: #EADFD5;
+    --primary-orange: #FF7A45;
+    --primary-orange-hover: #E86835;
+    --primary-orange-light: #FFF0E8;
+    --primary-orange-glow: rgba(255, 122, 69, 0.25);
+  }
+
+  .dark {
+    --bg-page: #111111;
+    --bg-card: #202020;
+    --bg-card-secondary: #181818;
+    --bg-subtle: #282828;
+    --text-main: #FFFFFF;
+    --text-muted: #B8B8B8;
+    --border-color: #333333;
+    --primary-orange: #FF7A45;
+    --primary-orange-hover: #FF8C5C;
+    --primary-orange-light: #2D1E17;
+    --primary-orange-glow: rgba(255, 122, 69, 0.35);
+  }
+
+  body {
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    transition: background-color 0.25s ease, color 0.25s ease;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Custom utility classes */
+.bg-page {
+  background-color: var(--bg-page);
+}
+
+.bg-card-theme {
+  background-color: var(--bg-card);
+}
+
+.bg-card-sec {
+  background-color: var(--bg-card-secondary);
+}
+
+.bg-subtle-theme {
+  background-color: var(--bg-subtle);
+}
+
+.text-main-theme {
+  color: var(--text-main);
+}
+
+.text-muted-theme {
+  color: var(--text-muted);
+}
+
+.border-theme {
+  border-color: var(--border-color);
+}
+
+.brand-orange {
+  color: var(--primary-orange);
+}
+
+.bg-brand-orange {
+  background-color: var(--primary-orange);
+}
+
+.border-brand-orange {
+  border-color: var(--primary-orange);
+}
+
+.glow-orange {
+  box-shadow: 0 0 0 3px rgba(255, 122, 69, 0.22), 0 8px 24px -4px rgba(255, 122, 69, 0.2);
+}
+
+.glow-subtle {
+  box-shadow: 0 4px 20px -2px rgba(255, 122, 69, 0.12);
+}
+
+/* Smooth selection card animations */
+.selection-card {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.selection-card:hover {
+  transform: translateY(-2px);
+}
+
+.selection-card:active {
+  transform: translateY(0px);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 122, 69, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 122, 69, 0.45);
+}
